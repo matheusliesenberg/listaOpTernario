@@ -5,10 +5,17 @@
 
     //Entrada
 
+    const n1 = Number(prompt(`Informe um número.`).trim());
+    const n2 = Number(prompt(`Informe outro número novamente.`).trim());
     
     //Processamento
 
+    let NumeroMaior = ``;
+    (n1 > n2) ? NumeroMaior = `O primeiro número é maior.`
+    : NumeroMaior = `O segundo número é maior.`;
     
     //Saída
+
+    alert(`${NumeroMaior}`);
     
 </script>

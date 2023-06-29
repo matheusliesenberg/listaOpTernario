@@ -5,10 +5,16 @@
 
     //Entrada
 
+    const AnoNascimento = Number(prompt(`Infome seu ano de nascimento.`).trim());
 
     //Processamento
 
+    let votar = ``;
+    (AnoNascimento <= 2007) ? votar = `Você já pode votar.`
+    :votar =  `Você não pode votar.`;
 
     //Saída
 
+    alert(`${votar}`);
+    
 </script>

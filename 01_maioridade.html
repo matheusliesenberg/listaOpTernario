@@ -5,10 +5,16 @@
 
     //Entrada
 
+    const idade = Number(prompt(`Informe a sua idade `).trim());
 
     //Processamento
 
+    let maioridade = "";
+    (idade >= 18) ? maioridade = ` você antigiu a maioridade`
+        : maioridade = `você não atingiu a maioridade`;
 
     //Saída
 
+    alert(`${maioridade}`)
+    
 </script>
