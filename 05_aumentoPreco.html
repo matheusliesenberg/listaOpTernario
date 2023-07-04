@@ -2,17 +2,25 @@
 <script>
     //Problema: Aumento de Preço
     //Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
-        //- até 280(inclusive): aumento de 20 %
-        //- até 700(inclusive): aumento de 15 %
-        //- até 1500(inclusive): aumento de 10 %
-        //- acima de 1500: aumento de 5 %
-    
-    //Entrada
+    //- até 280(inclusive): aumento de 20 %
+    //- até 700(inclusive): aumento de 15 %
+    //- até 1500(inclusive): aumento de 10 %
+    //- acima de 1500: aumento de 5 %
 
+    //Entrada
+    const PrecoProduto = Number(prompt("informe o preco do produto").trim().replace(",", "."))
 
     //Processamento
+    let Ate280 = (PrecoProduto * 0.2) + PrecoProduto;
+    let Ate700 = (PrecoProduto * 0.15) + PrecoProduto;
+    let Ate1500 = (PrecoProduto * 0.1) + PrecoProduto;
+    let Acima1500 = (PrecoProduto * 0.05) + PrecoProduto;
+    let Reajuste = "";
 
-    
+    (PrecoProduto <= 280) ? Reajuste = `o novo preco do produto é ${Ate280}reais`
+        : (PrecoProduto <= 700) ? Reajuste = `o novo preco do produto é ${Ate700}reais`
+            : (PrecoProduto <= 1500) ? Reajuste = `o novo preco do produto é ${Ate1500}reais`
+                : Reajuste = `o novo preco do produto é ${Acima1500}reais`;
     //Saída
-
+    alert(`${Reajuste.replace(".", ",")}`);
 </script>

@@ -8,11 +8,13 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+const Horas = Number(prompt(`informe quantidade de horas que voce trabalhou essa semana `).trim().replace(",","."));
+const Salario = Number(prompt(`informe quanto voce recebe por hora`).trim().replace(",","."));
     //Processamento
-
-    
+    let SalarioComBonus = "";
+    (Horas <= 45) ? SalarioComBonus = "nao havera bonus "
+    :(Horas <= 60) ? SalarioComBonus = (Salario * 0.2) + Salario
+    :SalarioComBonus = (Salario * 0.3) + Salario
     //Saída
-
+    alert(`seu salario sera ${SalarioComBonus.toFixed(2).replace(".",",")}`);
 </script>

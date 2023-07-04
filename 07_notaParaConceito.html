@@ -10,11 +10,16 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
-
+    const NotaP = Number(prompt(`informe a nota da sua prova`).trim().replace(",", "."));
+    let Nota = "";
     //Processamento
+    (NotaP <= 5.9) ? Nota = `voce tirou um 'E'`
+        : (NotaP <= 6.9) ? Nota = `voce tirou um 'D'`
+            : (NotaP <= 7.9) ? Nota = `voce tirou um C'`
+                : (NotaP <= 8.9) ? Nota = `voce tirou um 'B'`
+                    : (NotaP <= 10) ? Nota = `voce tirou um 'A'`
+                        : alert("opcao invalida")
 
-    
     //Saída
-
+    alert(`${Nota}`)
 </script>

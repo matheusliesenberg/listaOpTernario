@@ -8,11 +8,21 @@
     // - cães grandes: fator 7.
 
     //Entrada
-
-
+    let P = 5;
+    let M = 6;
+    let G = 7;
+    const Idade = Number(prompt(`Informe quantos anos tem seu cão`).trim());
+    const Porte = prompt(`informe o porte do seu cão`).trim().toUpperCase();
     //Processamento
-
-    
+    let IdadeCão = "";
+    let IdadeP = P * Idade;
+    let IdadeM = M * Idade;
+    let IdadeG = G * Idade;
+    (Porte === "P") ? IdadeCão = `o seu cão tem ${IdadeP} anos em anos caninos`
+        : (Porte === "M") ? IdadeCão = `o seu cão tem ${IdadeM} anos em anos caninos`
+            : (Porte === "G") ? IdadeCão = `o seu cão tem ${IdadeG} anos em anos caninos`
+                : alert("opcão invalida");
     //Saída
-
+    alert(`${IdadeCão}`);
 </script>
+

@@ -6,12 +6,16 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    const PrecoPorL = Number(prompt(`informe o preco do litro do combustivel`).trim().replace(",", "."));
+    const LitrosD = Number(prompt(`informe quantos litros são nescessarios para se deslocar para o trabalho diariamente.`).trim().replace(",", "."));
+    const PrecoTP = Number(prompt(`informe o preço do transporte público que deverá pagar para se deslocar ao trabalho diariamente.`).trim().replace(",", "."));
     //Processamento
-
-    
+    let PrecoL = PrecoPorL * LitrosD
+    let Barato = "";
+    (PrecoL < PrecoTP) ? Barato = `É mais barato ir de carro`
+        : (PrecoL > PrecoTP) ? Barato = `É mais barato ir de tranporte publico`
+            : alert("voce que escolhe")
     //Saída
+    alert(`${Barato}`)
 
-    
 </script>

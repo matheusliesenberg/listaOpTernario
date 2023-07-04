@@ -10,11 +10,17 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
+const ContaAgua = Number(prompt(`informe sua quantos reais de despesas veio na conta de agua`).trim().replace(",","."))
+const ContaLuz = Number(prompt(`informe sua quantos reais de despesas veio na conta de energia`).trim().replace(",","."))
+const ContaTelefone = Number(prompt(`informe sua quantos reais de despesas veio na conta de telefone`).trim().replace(",","."))
+const ContaMercado = Number(prompt(`informe sua quantos reais de despesas voce teve no supermercado`).trim().replace(",","."))
+const Salario = Number(prompt(`informe quanto voce recebe de salario`))
 
     //Processamento
-
-    
+let Contas = (ContaAgua + ContaLuz + ContaTelefone + ContaMercado);
+let RestouFaltou = (Salario - Contas);
+    (RestouFaltou > 0) ? RestouFaltou = `sobrou ${RestouFaltou}reais`
+    :RestouFaltou = `faltou ${RestouFaltou}reais`;
     //Saída
-    
+    alert(`${RestouFaltou.trim().replace(",",".").replace("-","")}`)
 </script>
